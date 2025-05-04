@@ -10,7 +10,7 @@ const Banner = () => {
           <h1 className="text-4xl font-bold md:text-5xl lg:text-[56px]">
             Build better with <br /> AI Co-Founder
           </h1>
-          <p className="font-bold">
+          <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
