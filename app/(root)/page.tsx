@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Banner from "./components/Banner";
 import AboutUs from "./components/AboutUs";
 import Internships from "./components/Internships";
+import Events from "./components/Events";
 
 export default function Home() {
   return (
@@ -19,65 +20,7 @@ export default function Home() {
       <Internships />
 
       {/* Events Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-[#6B3F2D]">
-              Upcoming Events
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-              Join our events to learn, network, and grow your startup.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <Card key={i} className="overflow-hidden border-none shadow-md">
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={`/placeholder.svg?height=200&width=400&text=Event ${i}`}
-                    alt={`Event ${i}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardContent className="p-4">
-                  <div className="mb-3 flex items-center justify-between">
-                    <span className="rounded-full bg-[#FDBA3C]/10 px-3 py-1 text-xs font-medium text-[#FDBA3C]">
-                      Workshop
-                    </span>
-                    <span className="text-sm text-gray-500">
-                      May {10 + i}, 2025
-                    </span>
-                  </div>
-                  <h3 className="mb-2 text-lg font-semibold text-[#6B3F2D]">
-                    Startup Funding Workshop {i}
-                  </h3>
-                  <p className="mb-4 text-sm text-gray-600">
-                    Learn how to secure funding for your early-stage startup.
-                  </p>
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#6B3F2D] text-[#6B3F2D]"
-                  >
-                    Register Now
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <Link
-              href="/events"
-              className="inline-flex items-center text-[#6B3F2D] hover:text-[#FDBA3C]"
-            >
-              View all events
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Events />
 
       {/* Podcast Section */}
       <section className="bg-gray-50 py-16">
