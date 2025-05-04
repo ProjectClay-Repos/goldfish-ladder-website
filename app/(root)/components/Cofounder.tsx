@@ -3,7 +3,7 @@ import chatgpt from "@/assets/chatgpt.png";
 
 const Cofounder = () => {
   return (
-    <section className="max-w-[1080px] mx-auto mt-28">
+    <section className="max-w-[1080px] mx-auto mt-28 mb-36">
       <div className="max-w-[482px] space-y-6 py-10">
         <h1 className="text-4xl font-bold md:text-5xl lg:text-[56px]">
           AI Co-Founder
