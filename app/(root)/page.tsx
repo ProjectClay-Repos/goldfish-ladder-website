@@ -1,12 +1,10 @@
-import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
 import Banner from "./components/Banner";
 import AboutUs from "./components/AboutUs";
 import Internships from "./components/Internships";
 import Events from "./components/Events";
+import Podcast from "./components/Podcast";
 
 export default function Home() {
   return (
@@ -23,55 +21,7 @@ export default function Home() {
       <Events />
 
       {/* Podcast Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-[#6B3F2D]">
-              Voices of Young Founders
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-              Listen to inspiring stories from successful young entrepreneurs.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {[1, 2, 3, 4].map((i) => (
-              <Card key={i} className="overflow-hidden border-none shadow-md">
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={`/placeholder.svg?height=200&width=200&text=Podcast ${i}`}
-                    alt={`Podcast ${i}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardContent className="p-4">
-                  <h3 className="mb-2 text-lg font-semibold text-[#6B3F2D]">
-                    From Idea to IPO
-                  </h3>
-                  <p className="mb-4 text-sm text-gray-600">With Founder {i}</p>
-                  <Button
-                    variant="outline"
-                    className="w-full border-[#6B3F2D] text-[#6B3F2D]"
-                  >
-                    Listen Now
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <Link
-              href="/podcast"
-              className="inline-flex items-center text-[#6B3F2D] hover:text-[#FDBA3C]"
-            >
-              Explore all episodes
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Podcast />
 
       {/* AI Co-Founder Section */}
       <section className="bg-[#6B3F2D] py-20 text-white">
