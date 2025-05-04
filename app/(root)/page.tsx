@@ -26,9 +26,6 @@ export default function Home() {
 
       {/* AI Co-Founder Section */}
       <Cofounder />
-
-      {/* Footer */}
-      <footer className="h-32 sm:h-40 bg-[#6B3F2D] w-full mt-36"></footer>
     </div>
   );
 }

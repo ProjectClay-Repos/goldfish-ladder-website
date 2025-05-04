@@ -99,8 +99,6 @@ export default function AboutPage() {
 </section>
 
 
-      {/* Footer */}
-      <footer className="h-32 sm:h-40 bg-[#6B3F2D] w-full" />
-    </div>
+      </div>
   )
 }
