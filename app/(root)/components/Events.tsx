@@ -10,8 +10,8 @@ const Events = () => {
   return (
     <section className="max-w-[1120px] mx-auto mt-[272px]">
       <div className="mb-12">
-        <h2 className="text-6xl font-bold mb-7">Internships</h2>
-        <p>lorem ipsum lorem ipsum</p>
+        <h2 className="text-6xl font-bold mb-7">Events</h2>
+        <p className="font-semibold text-3xl">lorem ipsum lorem ipsum</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">

@@ -5,7 +5,7 @@ const Internships = () => {
     <section className="max-w-[1200px] mx-auto mt-[272px]">
       <div className="mb-12">
         <h2 className="text-6xl font-bold mb-7">Internships</h2>
-        <p>lorem ipsum lorem ipsum</p>
+        <p className="font-semibold text-3xl">lorem ipsum lorem ipsum</p>
       </div>
 
       <div className="overflow-hidden whitespace-nowrap py-2">
