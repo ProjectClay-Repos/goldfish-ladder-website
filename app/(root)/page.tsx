@@ -3,131 +3,20 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
-import bannerImage from "@/assets/banner-image.png";
+import Banner from "./components/Banner";
+import AboutUs from "./components/AboutUs";
+import Internships from "./components/Internships";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="max-w-[1100px] mx-auto mt-28">
-        <div className="flex flex-col items-center justify-between md:flex-row md:gap-20">
-          <div className="max-w-[482px] space-y-6 py-10">
-            <h1 className="text-4xl font-bold md:text-5xl lg:text-[56px]">
-              Build better with <br /> AI Co-Founder
-            </h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-            </p>
-            <div>
-              <button className="bg-[#FFB32C] text-[#6B3F2D] hover:bg-[#FDBA3C]/90 py-3 px-9 text-3xl rounded-2xl">
-                Ask AI
-              </button>
-            </div>
-          </div>
-          <Image
-            src={bannerImage}
-            alt="Banner Image"
-            height={526}
-            width={434}
-          />
-        </div>
-      </section>
+      <Banner />
 
       {/* About Us Section */}
-      <section className="max-w-[1100px] mx-auto mt-[186px]">
-        <div className="max-w-[740px] mx-auto mb-12 text-center">
-          <h2 className="text-6xl font-bold mb-16">About Us</h2>
-          <p className="mx-auto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-          </p>
-        </div>
-
-        <div className="bg-[#ffb32c]">
-          <h2>Why Us ?</h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 ">
-            <Card className="border-2 border-[#FDBA3C]/20 shadow-md">
-              <CardContent className="flex flex-col items-center p-6 text-center">
-                <h3 className="mb-2 text-xl font-semibold text-[#6B3F2D]">
-                  Lorem Ipsum
-                </h3>
-                <p className="text-gray-600">
-                  lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                  lorem ipsum
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <AboutUs />
 
       {/* Internship Section */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-[#6B3F2D]">
-              Internship Opportunities
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-              Discover exciting internship opportunities at innovative startups
-              and established companies.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <Card key={i} className="overflow-hidden border-none shadow-md">
-                <CardContent className="p-0">
-                  <div className="border-b border-gray-200 bg-[#FDBA3C] p-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <div className="h-10 w-10 rounded-full bg-white"></div>
-                        <div>
-                          <h3 className="font-semibold text-[#6B3F2D]">
-                            Company {i}
-                          </h3>
-                          <p className="text-sm text-[#6B3F2D]/80">
-                            Tech Startup
-                          </p>
-                        </div>
-                      </div>
-                      <span className="rounded-full bg-white px-3 py-1 text-xs font-medium text-[#6B3F2D]">
-                        Remote
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <h4 className="mb-2 text-lg font-semibold">
-                      Product Design Intern
-                    </h4>
-                    <p className="mb-4 text-sm text-gray-600">
-                      3-6 months • Full-time • $1000/month
-                    </p>
-                    <Button className="w-full bg-[#6B3F2D] text-white hover:bg-[#6B3F2D]/90">
-                      Apply Now
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          <div className="mt-8 text-center">
-            <Link
-              href="/internship"
-              className="inline-flex items-center text-[#6B3F2D] hover:text-[#FDBA3C]"
-            >
-              View all opportunities
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </div>
-        </div>
-      </section>
+      <Internships />
 
       {/* Events Section */}
       <section className="py-16">
