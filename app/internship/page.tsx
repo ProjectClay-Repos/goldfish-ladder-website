@@ -27,64 +27,76 @@ export default function InternshipPage() {
       </div>
 
       {/* Yellow Section */}
-      <div className="bg-[#FDBA3C] px-6 md:px-10 py-16 md:py-20 text-black">
-        {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
-          {["Filters", "Filters", "Filters", "Filters", "Filters"].map((label, i) => (
-            <Button key={i} className="bg-white text-black rounded-md text-[18px] md:text-[24px] px-4 md:px-6 py-2 md:py-3">
-              {label}
-            </Button>
-          ))}
-        </div>
+      <div className="bg-[#FDBA3C] px-6 md:px-10 py-16 md:py-20 mx-20 text-black rounded-3xl">
+  {/* Filter Buttons */}
+  <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-12">
+    {["Filters", "Filters", "Filters", "Filters", "Filters"].map((label, i) => (
+      <Button key={i} className="bg-white text-black rounded-md text-[18px] md:text-[24px] px-4 md:px-6 py-2 md:py-3">
+        {label}
+      </Button>
+    ))}
+    {/* Adding circular internship/filter.png block */}
+    <Button className="bg-white text-black rounded-full p-3">
+      <Image
+        src="/internship/filter.png"
+        alt="filter icon"
+        width={20}
+        height={20}
+        className="object-contain"
+      />
+    </Button>
+  </div>
 
-        {/* Internship Cards */}
-        <div className="space-y-12 md:space-y-16 max-w-6xl mx-auto">
-          {[1, 2, 3].map((i) => (
-            <Card
-              key={i}
-              className="bg-white flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-16 py-8 md:py-12
-              rounded-none rounded-b-xl border-b-[10px] md:border-b-[15px] border-b-[#b17e11] text-black"
-            >
-              <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-10">
-                <div>
-                  <h3 className="font-bold text-[24px] md:text-[36px]">Lorem ipsum</h3>
-                  <div className="flex flex-wrap gap-4 mt-4 text-[16px] md:text-[24px]">
-                    <div className="flex items-center gap-2 md:gap-3">
-                      <Image src="/internship/location.png" alt="location" width={24} height={24} />
-                      <span>Remote</span>
-                    </div>
-                    <div className="flex items-center gap-2 md:gap-3">
-                      <Image src="/internship/calendar.png" alt="calendar" width={24} height={24} />
-                      <span>3 Months</span>
-                    </div>
-                    <div className="flex items-center gap-2 md:gap-3">
-                      <Image src="/internship/stipend.png" alt="stipend" width={24} height={24} />
-                      <span>Unpaid</span>
-                    </div>
-                  </div>
-                </div>
+  {/* Internship Cards */}
+  <div className="space-y-12 md:space-y-16 max-w-6xl mx-auto">
+    {[1, 2, 3].map((i) => (
+      <Card
+        key={i}
+        className="bg-white flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-16 py-8 md:py-12
+        rounded-none rounded-b-xl border-b-[15px] border-b-[#b17e11] text-black"
+      >
+        <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-10">
+          <div>
+            <h3 className="font-bold text-[24px] md:text-[36px]">Lorem ipsum</h3>
+            <div className="flex flex-wrap gap-4 mt-4 text-[16px] md:text-[24px]">
+              <div className="flex items-center gap-2 md:gap-3">
+                <Image src="/internship/location.png" alt="location" width={24} height={24} />
+                <span>Remote</span>
               </div>
-
-              <div className="mt-6 md:mt-0 self-center md:self-auto">
-                <Image
-                  src="/internship/ipsum.png"
-                  alt="logo"
-                  width={120}
-                  height={120}
-                  className="object-contain"
-                />
+              <div className="flex items-center gap-2 md:gap-3">
+                <Image src="/internship/calendar.png" alt="calendar" width={24} height={24} />
+                <span>3 Months</span>
               </div>
-            </Card>
-          ))}
+              <div className="flex items-center gap-2 md:gap-3">
+                <Image src="/internship/stipend.png" alt="stipend" width={24} height={24} />
+                <span>Unpaid</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* View More Button */}
-        <div className="flex justify-center mt-12">
-          <Button className="bg-[#6B3F2D] text-white px-8 md:px-10 py-3 md:py-4 text-[20px] md:text-[24px] rounded-xl">
-            View more
-          </Button>
+        <div className="mt-6 md:mt-0 self-center md:self-auto">
+          <Image
+            src="/internship/ipsum.png"
+            alt="logo"
+            width={120}
+            height={120}
+            className="object-contain"
+          />
         </div>
-      </div>
+      </Card>
+    ))}
+  </div>
+
+  {/* View More Button */}
+  <div className="flex justify-center mt-12">
+    <Button className="bg-[#6B3F2D] text-white px-8 md:px-10 py-3 md:py-4 text-[20px] md:text-[24px] rounded-xl">
+      View more
+    </Button>
+  </div>
+</div>
+
+
 
       {/* Emerging Startups Section */}
       <div className="bg-white py-16 md:py-20 px-6 md:px-10 text-black">
