@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -21,14 +22,12 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
+          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="relative h-10 w-10">
-              <div className="absolute h-10 w-10 rounded-full bg-[#FDBA3C]"></div>
-              <div className="absolute left-1 top-1 h-8 w-8 rounded-full bg-white"></div>
-              <div className="absolute left-2 top-2 h-6 w-6 rounded-full bg-[#6B3F2D]"></div>
-            </div>
-            <span className="text-xl font-bold text-[#6B3F2D]">Young Founders</span>
-          </Link>
+  <div className="relative h-24 w-24">
+    <Image src="/logo.png" alt="Logo" fill className="object-contain" />
+  </div>
+</Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:space-x-6">
@@ -41,7 +40,21 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Button className="bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#FDBA3C]/90">Join Now</Button>
+
+            {/* Auth Buttons */}
+            <div className="flex items-center gap-3">
+              <Button
+                variant="ghost"
+                className="rounded-full text-[#FDBA3C] hover:bg-[#FDBA3C] hover:text-white"
+              >
+                Login
+              </Button>
+              <Button
+                className="rounded-full bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white"
+              >
+                Sign Up
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Navigation Toggle */}
@@ -65,7 +78,19 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Button className="w-full bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#FDBA3C]/90">Join Now</Button>
+            <div className="flex flex-col gap-2">
+              <Button
+                variant="ghost"
+                className="rounded-full text-[#FDBA3C] hover:bg-[#FDBA3C] hover:text-white w-full"
+              >
+                Login
+              </Button>
+              <Button
+                className="rounded-full bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white w-full"
+              >
+                Sign Up
+              </Button>
+            </div>
           </div>
         )}
       </div>
