@@ -1,12 +1,7 @@
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-
-
 export default function Footer() {
   return (
-    <footer className="bg-[#6B3F2D] py-6">
+    <footer className="h-32 sm:h-40 bg-[#6B3F2D] w-full">
       {/* Footer content removed */}
     </footer>
-  )
+  );
 }
