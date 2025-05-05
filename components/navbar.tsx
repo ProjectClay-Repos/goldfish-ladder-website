@@ -23,7 +23,7 @@ export default function Navbar() {
         <div className="px-2 md:px-0 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="h-1/2 w-1/2 md:h-auto md:w-auto">
-            <Image src="/logo.png" alt="Logo" height={130} width={306} />
+            <Image src="/logo.png" alt="Logo" height={174} width={174} />
           </Link>
 
           {/* Desktop Navigation */}
