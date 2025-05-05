@@ -1,161 +1,311 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, MapPin, Clock, Users } from "lucide-react"
+import { Calendar, MapPin, Clock, Users , } from "lucide-react"
 
 export default function EventsPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center m-[35px]">
       {/* Hero Section */}
-      <section className="bg-[#FDBA3C] py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="mb-6 text-4xl font-bold text-[#6B3F2D]">Events to Think, Learn, and Connect</h1>
-          <p className="mx-auto mb-8 max-w-2xl text-[#6B3F2D]/80">
-            Join our community events to learn from industry experts, connect with fellow entrepreneurs, and grow your
-            startup.
-          </p>
-          <Button className="bg-[#6B3F2D] text-white hover:bg-[#6B3F2D]/90">Browse Events</Button>
+      <section >
+      <div className=" max-w-[1047px]  rounded-2xl px-14 py-[70px] bg-gradient-to-b from-[#ffb32c] to-[#b1662b] mt-[10px]">
+      <div className="flex flex-col items-center gap-10">
+        <div className="w-full">
+          <h1 className="text-[70px] font-bold text-white text-center leading-tight">
+            "Events to Pitch, Learn, and Connect  "
+          </h1>
         </div>
-      </section>
+        
+        <div className="mt-[43px]">
+          <p className="text-[26px] font-semibold text-white text-center leading-tight">
+            Join pitch nights, startup jams, hackathons, and virtual meetups—all designed for young founders
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+      </section >
 
       {/* Currently Active Events */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="mb-8 text-2xl font-bold text-[#6B3F2D]">Currently Active</h2>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {[1, 2, 3].map((i) => (
-              <Card key={i} className="overflow-hidden border-none shadow-md">
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={`/placeholder.svg?height=200&width=400&text=Event ${i}`}
-                    alt={`Event ${i}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <CardContent className="p-4">
-                  <div className="mb-3 flex items-center justify-between">
-                    <span className="rounded-full bg-[#FDBA3C]/10 px-3 py-1 text-xs font-medium text-[#FDBA3C]">
-                      {i === 1 ? "Workshop" : i === 2 ? "Conference" : "Hackathon"}
-                    </span>
-                    <span className="text-sm text-gray-500">May {10 + i}, 2025</span>
-                  </div>
-                  <h3 className="mb-2 text-lg font-semibold text-[#6B3F2D]">
-                    {i === 1
-                      ? "Startup Funding Workshop"
-                      : i === 2
-                        ? "Young Founders Conference"
-                        : "Innovation Hackathon"}
-                  </h3>
-                  <p className="mb-4 text-sm text-gray-600">
-                    {i === 1
-                      ? "Learn how to secure funding for your early-stage startup."
-                      : i === 2
-                        ? "Connect with successful entrepreneurs and investors."
-                        : "Build innovative solutions to real-world problems."}
-                  </p>
-                  <div className="mb-4 space-y-2 text-sm text-gray-600">
-                    <div className="flex items-center">
-                      <Calendar className="mr-2 h-4 w-4 text-[#FDBA3C]" />
-                      <span>May {10 + i}, 2025</span>
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="mr-2 h-4 w-4 text-[#FDBA3C]" />
-                      <span>10:00 AM - 4:00 PM</span>
-                    </div>
-                    <div className="flex items-center">
-                      <MapPin className="mr-2 h-4 w-4 text-[#FDBA3C]" />
-                      <span>{i === 2 ? "Virtual" : "Innovation Hub, San Francisco"}</span>
-                    </div>
-                  </div>
-                  <Button className="w-full bg-[#6B3F2D] text-white hover:bg-[#6B3F2D]/90">Register Now</Button>
-                </CardContent>
-              </Card>
-            ))}
+      <section className="mt-[43px]  w-max-[1047px]">
+            <div className="flex flex-col  w-full mt-[40px]">
+            <h1 className="text-5xl font-bold mb-4 text-black">Currently Active</h1>
+            <p className="text-xl font-medium text-black">lorem ipsum lorem ipsum</p>
           </div>
+          <div className="flex justify-center w-full">
+  <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full max-w-4xl mx-auto px-4">
+    {[
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+    ].map((item, i) => (
+      <div key={i} className="flex flex-col w-full max-w-xs mx-auto shadow-md pb-[30px] rounded-md mt-[50px]">
+      {/* Image container with explicit relative positioning and high z-index */}
+      <div className="relative w-full">
+        <Image
+          src={item.image}
+          alt="internship hero"
+          width={500}
+          height={600}
+          className="object-contain max-w-full h-auto"
+        />
+        
+        <div 
+          className="absolute bottom-0 left-0 right-0 bg-black  bg-opacity-30 h-[40px] rounded-b-lg pl-[10px]"
+          // Using inline style for z-index as backup
+        >
+                  <div className="flex flex-row items-center opacity-80 mt-2 text-white">
+          <div className="mr-2 ">
+            <Calendar size={22} strokeWidth={1.4} />
+          </div>
+          <span className="font-medium text-sm capitalize">
+            {item.date}
+          </span>
         </div>
+        </div>
+      </div>
+      
+      <div className="w-full pl-[10px] h-[40%]">
+        <div className="flex flex-col mb-1">
+          <h1 className="text-3xl font-bold text-black mt-1">
+            {item.title}
+          </h1>
+          <p className="text-md font-medium text-black">
+            {item.desc}
+          </p>
+        </div>
+        
+        <div className="flex flex-row items-center opacity-80 mt-2">
+          <div className="mr-3">
+            <MapPin size={22} strokeWidth={1.4} />
+          </div>
+          <span className="font-medium text-sm capitalize">
+            {item.location}
+          </span>
+        </div>
+        
+        <div className="flex flex-row items-center mt-4">
+          <div className="mr-3">
+          <Image
+          src="Event/MoneyWavy (1).png"
+          alt="internship hero"
+          width={22}
+          height={22}
+          className="object-contain max-w-full h-auto"
+        />
+          </div>
+          <span className="font-medium text-sm">
+            {item.money}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    ))}
+  </div>
+</div>
+
+
+    
       </section>
 
       {/* Upcoming Events */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="mb-8 text-2xl font-bold text-[#6B3F2D]">Upcoming Events</h2>
-
-          <div className="space-y-4">
-            {[1, 2, 3, 4].map((i) => (
-              <Card key={i} className="overflow-hidden border-none shadow-md">
-                <CardContent className="p-4">
-                  <div className="flex flex-col items-start space-y-4 md:flex-row md:items-center md:space-x-6 md:space-y-0">
-                    <div className="flex h-20 w-20 flex-shrink-0 flex-col items-center justify-center rounded-lg bg-[#FDBA3C] text-[#6B3F2D]">
-                      <span className="text-2xl font-bold">{15 + i}</span>
-                      <span className="text-sm">May</span>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-[#6B3F2D]">
-                        {i === 1
-                          ? "Pitch Perfect: Mastering Your Startup Pitch"
-                          : i === 2
-                            ? "Product Market Fit Workshop"
-                            : i === 3
-                              ? "Networking Mixer"
-                              : "Founder Fireside Chat"}
-                      </h3>
-                      <div className="mt-2 flex flex-wrap items-center gap-4 text-sm text-gray-600">
-                        <div className="flex items-center">
-                          <Clock className="mr-1 h-4 w-4 text-[#FDBA3C]" />
-                          <span>6:00 PM - 8:00 PM</span>
-                        </div>
-                        <div className="flex items-center">
-                          <MapPin className="mr-1 h-4 w-4 text-[#FDBA3C]" />
-                          <span>{i % 2 === 0 ? "Virtual" : "Innovation Hub, San Francisco"}</span>
-                        </div>
-                        <div className="flex items-center">
-                          <Users className="mr-1 h-4 w-4 text-[#FDBA3C]" />
-                          <span>{30 + i * 10} attendees</span>
-                        </div>
-                      </div>
-                    </div>
-                    <Button className="bg-[#6B3F2D] text-white hover:bg-[#6B3F2D]/90">Register</Button>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+     
+      <section className="mt-[43px]  w-max-[1047px] ">
+            <div className="flex flex-col  w-full mt-[40px]">
+            <h1 className="text-5xl font-bold mb-4 text-black">Upcoming Events</h1>
+            <p className="text-xl font-medium text-black">lorem ipsum lorem ipsum</p>
           </div>
-        </div>
-      </section>
 
-      {/* For Students */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="mb-8 text-2xl font-bold text-[#6B3F2D]">For Students</h2>
-
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {[
-              { title: "Workshops", icon: "🔧", desc: "Hands-on learning experiences to develop essential skills." },
-              { title: "Networking", icon: "🤝", desc: "Connect with peers, mentors, and industry professionals." },
-              { title: "Competitions", icon: "🏆", desc: "Showcase your ideas and win prizes and recognition." },
-            ].map((item, i) => (
-              <Card key={i} className="border-2 border-[#FDBA3C]/20 shadow-md">
-                <CardContent className="flex flex-col items-center p-6 text-center">
-                  <div className="mb-4 text-4xl">{item.icon}</div>
-                  <h3 className="mb-2 text-xl font-semibold text-[#6B3F2D]">{item.title}</h3>
-                  <p className="text-gray-600">{item.desc}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="flex justify-center w-full">
+  <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full max-w-4xl mx-auto px-4">
+    {[
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35t.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35s.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35c.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+    ].map((item, i) => (
+      <div key={i} className="flex flex-col w-full max-w-xs mx-auto shadow-md pb-[30px] rounded-b-md mt-[50px]">
+      {/* Image container with explicit relative positioning and high z-index */}
+      <div className="relative w-full">
+        <Image
+          src={item.image}
+          alt="internship hero"
+          width={500}
+          height={600}
+          className="object-contain max-w-full h-auto"
+        />
+        
+        <div 
+          className="absolute bottom-0 left-0 right-0 bg-black  bg-opacity-30 h-[40px] rounded-b-lg pl-[10px]"
+          // Using inline style for z-index as backup
+        >
+                  <div className="flex flex-row items-center opacity-80 mt-2 text-white">
+          <div className="mr-2 ">
+            <Calendar size={22} strokeWidth={1.4} />
           </div>
+          <span className="font-medium text-sm capitalize">
+            {item.date}
+          </span>
         </div>
+        </div>
+      </div>
+      
+      <div className="w-full pl-[10px] h-[40%]">
+        <div className="flex flex-col mb-1">
+          <h1 className="text-3xl font-bold text-black mt-1">
+            {item.title}
+          </h1>
+          <p className="text-md font-medium text-black">
+            {item.desc}
+          </p>
+        </div>
+        
+        <div className="flex flex-row items-center opacity-80 mt-2">
+          <div className="mr-3">
+            <MapPin size={22} strokeWidth={1.4} />
+          </div>
+          <span className="font-medium text-sm capitalize">
+            {item.location}
+          </span>
+        </div>
+        
+        <div className="flex flex-row items-center mt-4">
+          <div className="mr-3">
+          <Image
+          src="Event/MoneyWavy (1).png"
+          alt="internship hero"
+          width={22}
+          height={22}
+          className="object-contain max-w-full h-auto"
+        />
+          </div>
+          <span className="font-medium text-sm">
+            {item.money}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    ))}
+  </div>
+</div>
+
+      
       </section>
+       
+
+     
 
       {/* Call to Action */}
-      <section className="bg-[#6B3F2D] py-20 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-6 text-3xl font-bold">Want to host an event?</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-gray-300">
-            Partner with Young Founders to host workshops, talks, or networking events.
+      <section className="bg-[#FFB32C] py-20 text-white  w-max-[1047px] rounded-xl mt-[100px] p-[50px]">
+      <div className="flex flex-col  w-full w-max-[1047px]">
+            <h1 className="text-5xl font-bold mb-4 text-black">Upcoming Events</h1>
+            <p className="text-xl font-medium text-black">lorem ipsum lorem ipsum</p>
+          </div>
+          <div className="flex flex-col justify-center w-full">
+          <div className="flex flex-wrap justify-center sm:justify-between gap-2 w-full mt-8 px-4 sm:px-0">
+  <button className="flex-1 min-w-[120px] px-4 py-2 bg-white text-black rounded-md hover:bg-gray-100">
+    Filters
+  </button>
+  <button className="flex-1 min-w-[120px] px-4 py-2 bg-white text-black rounded-md hover:bg-gray-100">
+    Filters
+  </button>
+  <button className="flex-1 min-w-[120px] px-4 py-2 bg-white text-black rounded-md hover:bg-gray-100">
+    Filters
+  </button>
+  <button className="flex-1 min-w-[120px] px-4 py-2 bg-white text-black rounded-md hover:bg-gray-100">
+    Filters
+  </button>
+  <button className="px-2 py-2 bg-white text-black rounded-full hover:bg-gray-100 w-[40px]">
+    <Image
+      src="/Event/tune.png"
+      alt="tune icon"
+      width={24}
+      height={24}
+      className="object-contain"
+    />
+  </button>
+</div>
+
+
+  <div className="grid grid-cols-1 gap-6 md:grid-cols-3 w-full max-w-4xl mx-auto px-4">
+    {[
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35t.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35s.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35c.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35t.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35s.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" },
+      { title: "Lorem ipsum", image: "/Event/Rectangle 35c.png", desc: "Lorem ipsum", date: "22nd April", location: "New Delhi", money: "46$" }
+    ].map((item, i) => (
+      <div key={i} className="flex flex-col w-full max-w-xs min-w-[200px] mx-auto shadow-md pb-[30px] rounded-lg mt-[50px] bg-white">
+      {/* Image container with explicit relative positioning and high z-index */}
+      <div className="relative w-full">
+        <Image
+          src={item.image}
+          alt="internship hero"
+          width={500}
+          height={600}
+          className="object-contain max-w-full h-auto"
+        />
+        
+        <div 
+          className="absolute bottom-0 left-0 right-0 bg-black  bg-opacity-30 h-[40px] rounded-b-lg pl-[10px]"
+          // Using inline style for z-index as backup
+        >
+                  <div className="flex flex-row items-center opacity-80 mt-2 text-white">
+          <div className="mr-2 ">
+            <Calendar size={22} strokeWidth={1.4} />
+          </div>
+          <span className="font-medium text-sm capitalize">
+            {item.date}
+          </span>
+        </div>
+        </div>
+      </div>
+      
+      <div className="w-full pl-[10px] h-[40%]">
+        <div className="flex flex-col mb-1">
+          <h1 className="text-3xl font-bold text-black mt-1">
+            {item.title}
+          </h1>
+          <p className="text-md font-medium text-black">
+            {item.desc}
           </p>
-          <Button className="bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#FDBA3C]/90">Become a Host</Button>
+        </div>
+        
+        <div className="flex flex-row items-center opacity-80 mt-2 text-black">
+          <div className="mr-3">
+            <MapPin size={22} strokeWidth={1.4} />
+          </div>
+          <span className="font-medium text-sm capitalize">
+            {item.location}
+          </span>
+        </div>
+        
+        <div className="flex flex-row items-center mt-4 text-black">
+          <div className="mr-3">
+          <Image
+          src="Event/MoneyWavy (1).png"
+          alt="internship hero"
+          width={22}
+          height={22}
+          className="object-contain max-w-full h-auto"
+        />
+          </div>
+          <span className="font-medium text-sm">
+            {item.money}
+          </span>
+        </div>
+      </div>
+    </div>
+
+    ))}
+  </div>
+</div>
+        <div className="container mx-auto px-4 text-center mt-[70px]">
+         
+          <Button className="bg-[#854836] h-[57px] text-white hover:bg-[#FDBA3C]/90  w-[316px]">View more</Button>
         </div>
       </section>
     </div>
