@@ -1,23 +1,22 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, MapPin, Clock, Users } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 
 export default function EventsPage() {
   return (
-    <div className="flex flex-col items-center m-[35px]">
+    <div className="flex flex-col items-center mx-2 md:mx-9 my-9">
       {/* Hero Section */}
       <section>
-        <div className=" max-w-[1047px]  rounded-2xl px-14 py-[70px] bg-gradient-to-b from-[#ffb32c] to-[#b1662b] mt-[10px]">
+        <div className=" max-w-[1047px]  rounded-2xl px-2 md:px-14 py-[70px] bg-gradient-to-b from-[#ffb32c] to-[#b1662b] mt-[10px]">
           <div className="flex flex-col items-center gap-10">
             <div className="w-full">
-              <h1 className="text-[70px] font-bold text-white text-center leading-tight">
+              <h1 className="text-2xl md:text-7xl font-bold text-white text-center leading-tight">
                 "Events to Pitch, Learn, and Connect "
               </h1>
             </div>
 
-            <div className="mt-[43px]">
-              <p className="text-[26px] font-semibold text-white text-center leading-tight">
+            <div className="mt-4 md:mt-11">
+              <p className="md:text-2xl font-semibold text-white text-center leading-tight">
                 Join pitch nights, startup jams, hackathons, and virtual
                 meetups—all designed for young founders
               </p>
@@ -27,9 +26,9 @@ export default function EventsPage() {
       </section>
 
       {/* Currently Active Events */}
-      <section className="mt-[43px]  w-max-[1047px]">
+      <section className="mt-9  max-w-[1047px]">
         <div className="flex flex-col  w-full mt-[40px]">
-          <h1 className="text-5xl font-bold mb-4 text-black">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">
             Currently Active
           </h1>
           <p className="text-xl font-medium text-black">
@@ -132,15 +131,12 @@ export default function EventsPage() {
       </section>
 
       {/* Upcoming Events */}
-
-      <section className="mt-[43px]  w-max-[1047px] ">
-        <div className="flex flex-col  w-full mt-[40px]">
-          <h1 className="text-5xl font-bold mb-4 text-black">
+      <section className="mt-9  max-w-[1047px] ">
+        <div className="flex flex-col w-full mt-10">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4">
             Upcoming Events
           </h1>
-          <p className="text-xl font-medium text-black">
-            lorem ipsum lorem ipsum
-          </p>
+          <p className="text-lg font-medium">lorem ipsum lorem ipsum</p>
         </div>
 
         <div className="flex justify-center w-full">
@@ -239,15 +235,17 @@ export default function EventsPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="bg-[#FFB32C] py-20 text-white  w-max-[1047px] rounded-xl mt-[100px] p-[50px]">
-        <div className="flex flex-col  w-full w-max-[1047px]">
-          <h1 className="text-5xl font-bold mb-4 text-black">For Students</h1>
+      <section className="bg-[#FFB32C] px-2 py-20 text-white max-w-[1047px] rounded-xl mt-24 md:px-12">
+        <div className="flex flex-col w-full w-max-[1047px]">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">
+            For Students
+          </h1>
           <p className="text-xl font-medium text-black">
             lorem ipsum lorem ipsum
           </p>
         </div>
         <div className="flex flex-col justify-center w-full">
-          <div className="flex flex-wrap justify-center sm:justify-between gap-2 w-full mt-8 px-4 sm:px-0">
+          <div className="flex flex-wrap justify-center sm:justify-between gap-2 w-full mt-8 md:px-4">
             <button className="flex-1 min-w-[120px] px-4 py-2 bg-white text-black rounded-md hover:bg-gray-100">
               Filters
             </button>
