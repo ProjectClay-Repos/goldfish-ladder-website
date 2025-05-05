@@ -55,63 +55,92 @@ export default function InternshipPage() {
           </Button>
         </div>
 
-        {/* Internship Cards */}
         <div className="space-y-12 md:space-y-16 max-w-6xl mx-auto">
-          {[1, 2, 3].map((i) => (
+          {[
+            {
+              title: "Wave",
+              description:
+                "Wave is a mental health tech startup dedicated to making emotional well-being more accessible through personalised, AI-driven support tools. By combining cutting-edge technology with evidence-based therapy techniques, Waves offers users daily mental health check-ins, guided self-care, and access to licensed professionals, all in one seamless platform.",
+              image: "/internship/wave.avif",
+            },
+            {
+              title: "Project Clay",
+              description:
+                "Project Clay is a mentorship platform that connects high school students with near-peer mentors, current students at top global universities, to guide them through college admissions, career exploration, and personal projects. Founded in 2020 by Dyumna Madan and Shivom Sood, the startup gained national attention after securing a ₹15 lakh investment from Namita Thapar on Shark Tank India Season 4.",
+              image: "/internship/project-clay.png",
+            },
+            {
+              title: "Junior Economics Club",
+              description:
+                "The Junior Economic Club (JEC) is a student-led organisation dedicated to expanding high school students’ knowledge of economics, finance, and business. Through workshops, competitions, guest speaker events, and hands-on projects, JEC provides members with real-world insights and practical skills.",
+              image: "/internship/je.avif",
+            },
+            {
+              title: "Finomic",
+              description:
+                "Finomic is a youth-led organization specializing in increasing financial literacy among the youth. Our articles, written by students from around the world, explain crucial financial knowledge easily and understandably. We additionally provide opportunities for publishing papers on finance-related topics.",
+              image: "/internship/fin.avif",
+            },
+            {
+              title: "EconUnited",
+              description:
+                "EconUnited helps high school students worldwide learn about economics, finance, and business through online lessons, videos, slideshows, and workshops. Members can apply their knowledge in fun online competitions and even start their own ventures.",
+              image: "/internship/eco.avif",
+            },
+            {
+              title: "Cognify Wealth",
+              description:
+                "Cognify Wealth is an international nonprofit focused on bringing financial literacy to neurodivergent individuals. We create free finance guides and host workshops to empower individuals with practical financial knowledge and decision-making skills.",
+              image: "/internship/cog.avif",
+            },
+            {
+              title: "HumaraPundit",
+              description:
+                "Humara Pandit is a Bengaluru-based faith-tech startup that offers a range of services including booking pandits, providing puja samagri, and delivering sacred items like Gangajal. The platform blends tradition with technology to make spiritual practices more accessible.",
+              image: "/internship/ham.avif",
+            },
+            {
+              title: "TeeMeUp",
+              description:
+                "Teemeup is a student-led custom T-shirt brand that blends creativity, youth-driven design, and quality apparel. They provide personalized clothing for college events, clubs, startups, and campaigns, driven by affordability and customization.",
+              image: "/internship/tec.avif",
+            },
+            {
+              title: "WomenUp",
+              description:
+                "WomenUp is dedicated to supporting and empowering women in business. They aim to build a strong community of women helping each other succeed. They are currently looking for Chapter Presidents, Content Writers, and Social Media Directors.",
+              image: "/internship/wom.avif",
+            },
+            {
+              title: "Pinkface",
+              description:
+                "Pinkface is a youth-led organisation focused on teenage mental health. Their initiative, Pinkvent, connects struggling teens with peers to provide a safe space for emotional support. They are looking for short-form content creators, designers, and researchers.",
+              image: "/internship/tee.avif",
+            },
+          ].map(({ title, description, image }, i) => (
             <Card
               key={i}
-              className="bg-white flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-16 py-8 md:py-12
-        rounded-none rounded-b-xl border-b-[15px] border-b-[#b17e11] text-black"
+              className="bg-white flex flex-col md:flex-row items-start md:items-center justify-between px-6 md:px-16 py-8 md:py-12 rounded-none rounded-b-xl border-b-[15px] border-b-[#b17e11] text-black"
             >
               <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-10">
                 <div>
-                  <h3 className="font-bold text-[24px] md:text-[36px]">
-                    Lorem ipsum
-                  </h3>
-                  <div className="flex flex-wrap gap-4 mt-4 text-[16px] md:text-[24px]">
-                    <div className="flex items-center gap-2 md:gap-3">
-                      <Image
-                        src="/internship/location.png"
-                        alt="location"
-                        width={24}
-                        height={24}
-                      />
-                      <span>Remote</span>
-                    </div>
-                    <div className="flex items-center gap-2 md:gap-3">
-                      <Image
-                        src="/internship/calendar.png"
-                        alt="calendar"
-                        width={24}
-                        height={24}
-                      />
-                      <span>3 Months</span>
-                    </div>
-                    <div className="flex items-center gap-2 md:gap-3">
-                      <Image
-                        src="/internship/stipend.png"
-                        alt="stipend"
-                        width={24}
-                        height={24}
-                      />
-                      <span>Unpaid</span>
-                    </div>
-                  </div>
+                  <h3 className="font-bold text-[24px] md:text-[36px]">{title}</h3>
+                  <p className="mt-4 text-[16px] md:text-[20px] max-w-3xl">{description}</p>
                 </div>
               </div>
-
               <div className="mt-6 md:mt-0 self-center md:self-auto">
                 <Image
-                  src="/internship/ipsum.png"
-                  alt="logo"
-                  width={120}
-                  height={120}
+                  src={image}
+                  alt={title}
+                  width={220}
+                  height={220}
                   className="object-contain"
                 />
               </div>
             </Card>
           ))}
         </div>
+
 
         {/* View More Button */}
         <div className="flex justify-center mt-12">
