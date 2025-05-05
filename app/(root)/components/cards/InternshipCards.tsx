@@ -5,14 +5,14 @@ import { Calendar, MapPin } from "lucide-react";
 
 const InternshipCards = () => {
   return (
-    <div className="inline-block mr-7">
-      <div className="bg-[#ffb32c]/15 shadow-md flex py-9 px-7 rounded-xl">
+    <div className="md:inline-block mb-4 md:mr-7">
+      <div className="bg-[#ffb32c]/15 shadow-md flex flex-col-reverse gap-4 md:gap-0 md:flex-row py-9 px-7 rounded-xl">
         <div>
           <div className="mb-6">
             <h3 className="font-bold text-4xl">Lorem Ipsum</h3>
             <p className="text-lg">Lorem Ipsum</p>
           </div>
-          <div className="flex gap-8">
+          <div className="flex flex-col md:flex-row gap-8">
             <div className="flex items-center gap-1">
               <MapPin height={28} width={28} />
               <span>Remote</span>

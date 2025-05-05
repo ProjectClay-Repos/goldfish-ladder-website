@@ -3,7 +3,7 @@ import React from "react";
 
 const PodcastCard = ({ image }: { image: StaticImageData }) => {
   return (
-    <div className="inline-block mr-7">
+    <div className="md:inline-block md:mr-7 mb-4">
       <div className="shadow-md rounded-xl">
         <div className="relative">
           <Image
@@ -18,8 +18,8 @@ const PodcastCard = ({ image }: { image: StaticImageData }) => {
           </div>
         </div>
         <div className="px-3 mt-2 space-y-1 pb-2">
-          <h3 className="font-bold text-3xl">Lorem Ipsum</h3>
-          <p>Lorem Ipsum</p>
+          <h3 className="font-bold text-xl md:text-3xl">Lorem Ipsum</h3>
+          <p className="text-sm md:text-base">Lorem Ipsum</p>
           <div>
             <button className="bg-[#6B3F2D] text-white hover:bg-[#FDBA3C]/90 py-[10px] px-7 rounded-md font-semibold -mb-10">
               View More

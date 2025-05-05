@@ -8,10 +8,14 @@ const Events = () => {
   const events = [event1, event2, event3, event3];
 
   return (
-    <section className="max-w-[1120px] mx-auto mt-[272px]">
+    <section className="max-w-[1120px] mx-auto mt-20 md:mt-64 px-2 md:px-0">
       <div className="mb-12">
-        <h2 className="text-6xl font-bold mb-7">Events</h2>
-        <p className="font-semibold text-3xl">lorem ipsum lorem ipsum</p>
+        <h2 className="text-4xl md:text-6xl font-bold mb-7 text-center md:text-left">
+          Events
+        </h2>
+        <p className="font-semibold text-xl text-center md:text-left md:text-3xl">
+          lorem ipsum lorem ipsum
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">

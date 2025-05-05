@@ -2,13 +2,17 @@ import InternshipCards from "./cards/InternshipCards";
 
 const Internships = () => {
   return (
-    <section className="max-w-[1200px] mx-auto mt-[272px]">
+    <section className="max-w-[1200px] mx-auto mt-[272px] px-2 md:px-0">
       <div className="mb-12">
-        <h2 className="text-6xl font-bold mb-7">Internships</h2>
-        <p className="font-semibold text-3xl">lorem ipsum lorem ipsum</p>
+        <h2 className="text-4xl md:text-6xl font-bold mb-4 md:mb-7">
+          Internships
+        </h2>
+        <p className="font-semibold text-lg md:text-3xl">
+          lorem ipsum lorem ipsum
+        </p>
       </div>
 
-      <div className="overflow-hidden whitespace-nowrap py-2">
+      <div className="md:overflow-hidden md:whitespace-nowrap py-2">
         <InternshipCards />
         <InternshipCards />
         <InternshipCards />
