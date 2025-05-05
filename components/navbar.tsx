@@ -19,15 +19,15 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="container mx-auto">
-        <div className="flex items-center justify-between">
+      <div className="md:container md:mx-auto">
+        <div className="px-2 md:px-0 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/">
+          <Link href="/" className="h-1/2 w-1/2 md:h-full md:w-full">
             <Image src="/logo.png" alt="Logo" height={130} width={306} />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="flex gap-8">
+          <div className="hidden md:flex md:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -40,7 +40,7 @@ export default function Navbar() {
           </div>
 
           {/* Auth Buttons */}
-          <div className="flex items-center gap-2">
+          <div className="hidden md:flex md:items-center md:gap-2">
             <Button
               variant="ghost"
               className="rounded-full text-[#FDBA3C] hover:bg-[#FDBA3C] hover:text-white text-xl font-medium py-[6px] px-[16px]"
@@ -65,12 +65,12 @@ export default function Navbar() {
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="mt-4 space-y-4 md:hidden">
+          <div className="mt-4 space-y-4 md:hidden px-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="block py-2 text-sm font-medium text-gray-700 transition-colors hover:text-[#FDBA3C]"
+                className="block py-2 text-sm font-medium text-gray-700 transition-colors hover:text-[#FDBA3C] border-b"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.name}
