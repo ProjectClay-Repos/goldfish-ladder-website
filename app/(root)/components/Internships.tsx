@@ -2,7 +2,7 @@ import InternshipCards from "./cards/InternshipCards";
 
 const Internships = () => {
   return (
-    <section className="max-w-[1200px] mx-auto mt-[272px] px-2 md:px-0">
+    <section className="max-w-[1200px] mx-auto mt-[272px] px-2 md:px-0 w-full">
       <div className="mb-12">
         <h2 className="text-4xl md:text-6xl font-bold mb-4 md:mb-7">
           Internships
