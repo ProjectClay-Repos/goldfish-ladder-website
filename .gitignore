@@ -55,3 +55,4 @@ coverage/
 # Custom build artifacts
 *.log
 *.gz
+.vercel
