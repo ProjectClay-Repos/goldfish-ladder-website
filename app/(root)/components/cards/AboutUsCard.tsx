@@ -1,18 +1,28 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import AnimatedCard from "../Animations/AnimatedCards";
 
-const AboutUsCard = () => {
-  return (
-    <Card className="border-2 shadow-md">
-      <CardContent className="p-6">
-        <h3 className="mb-2 text-xl font-semibold">Lorem Ipsum</h3>
-        <p>
-          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
-          ipsum
-        </p>
-      </CardContent>
-    </Card>
+interface AboutUsCardProps {
+  title: string;
+  content: string;
+}
+
+const AboutUsCard: React.FC<AboutUsCardProps> = ({ title, content }) => {  return (
+    <AnimatedCard>
+    <div className="bg-white rounded-xl p-6  shadow-md h-[224px] w-[254px] flex  flex-col items-center justify-center mx-[10px] lg:mx-[6px] md:mx-[80px] mb-[30px]">
+      <div className=" mb-4">
+      <h3 className="text-xl font-bold mb-2">{title}</h3>
+      <p className="text-sm text-gray-600">
+      {content}
+      </p>
+
+      </div>
+    
+    </div>
+  </AnimatedCard>
   );
 };
 
 export default AboutUsCard;
+
+
+

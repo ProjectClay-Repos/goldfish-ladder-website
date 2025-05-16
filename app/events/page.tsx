@@ -1,28 +1,66 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"use client";
+
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Calendar, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button"; // Ensure this file uses named exports
+import { Calendar, MapPin } from "lucide-react"; // Ensure this file uses named exports
+import { motion } from "framer-motion"; // Ensure this file uses named exports
 
 export default function EventsPage() {
   return (
     <div className="flex flex-col items-center mx-2 md:mx-9 my-9">
       {/* Hero Section */}
       <section>
-        <div className=" max-w-[1047px]  rounded-2xl px-2 md:px-14 py-[70px] bg-gradient-to-b from-[#ffb32c] to-[#b1662b] mt-[10px]">
+        <motion.div
+          className="max-w-[1047px] rounded-2xl px-2 md:px-14 py-[70px] bg-gradient-to-b from-[#ffb32c] to-[#b1662b] mt-[10px]"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="flex flex-col items-center gap-10">
-            <div className="w-full">
+            {/* Title */}
+            <motion.div
+              className="w-full"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8 }}
+            >
               <h1 className="text-2xl md:text-7xl font-bold text-white text-center leading-tight">
-                "Events to Pitch, Learn, and Connect "
+                "Events to Pitch, Learn, and Connect"
               </h1>
-            </div>
+            </motion.div>
 
-            <div className="mt-4 md:mt-11">
+            {/* Subtitle */}
+            <motion.div
+              className="mt-4 md:mt-11"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
               <p className="md:text-2xl font-semibold text-white text-center leading-tight">
                 Join pitch nights, startup jams, hackathons, and virtual
                 meetups—all designed for young founders
               </p>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       {/* Currently Active Events */}
@@ -391,6 +429,7 @@ export default function EventsPage() {
           </Button>
         </div>
       </section>
+      
     </div>
   );
 }
