@@ -18,21 +18,27 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="md:container md:mx-auto">
-        <div className="px-2 md:px-0 flex items-center justify-between">
+    <nav className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between py-4">
           {/* Logo */}
-          <Link href="/" className="h-1/2 w-1/2 md:h-auto md:w-auto">
-            <Image src="/logo.png" alt="Logo" height={174} width={174} />
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo-2.png"
+              alt="Logo"
+              height={150}
+              width={150}
+              className="object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:gap-8">
+          <div className="hidden lg:flex lg:items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-2xl text-gray-700 transition-colors hover:text-[#FDBA3C]"
+                className="text-lg font-medium text-gray-700 hover:text-[#FDBA3C] transition-colors"
               >
                 {link.name}
               </Link>
@@ -40,14 +46,14 @@ export default function Navbar() {
           </div>
 
           {/* Auth Buttons */}
-          <div className="hidden md:flex md:items-center md:gap-2">
+          <div className="hidden md:flex md:items-center md:gap-4">
             <Button
               variant="ghost"
-              className="rounded-full text-[#FDBA3C] hover:bg-[#FDBA3C] hover:text-white text-xl font-medium py-[6px] px-[16px]"
+              className="rounded-full text-[#FDBA3C] hover:bg-[#FDBA3C] hover:text-white text-lg font-medium px-4 py-2"
             >
               Login
             </Button>
-            <Button className="rounded-full bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white py-[6px] px-[16px] text-xl font-medium">
+            <Button className="rounded-full bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white px-4 py-2 text-lg font-medium">
               Sign Up
             </Button>
           </div>
@@ -56,34 +62,36 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-700"
+              className="text-gray-700 focus:outline-none"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation Menu */}
         {isMenuOpen && (
-          <div className="mt-4 space-y-4 md:hidden px-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="block py-2 text-sm font-medium text-gray-700 transition-colors hover:text-[#FDBA3C] border-b"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
-            <div className="flex flex-col gap-2">
+          <div className="md:hidden bg-white shadow-lg rounded-lg mt-2 p-4">
+            <div className="space-y-4">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="block text-lg font-medium text-gray-700 hover:text-[#FDBA3C] transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+            <div className="mt-6 flex flex-col gap-4">
               <Button
                 variant="ghost"
-                className="rounded-full text-[#FDBA3C] hover:bg-[#FDBA3C] hover:text-white w-full"
+                className="rounded-full text-[#FDBA3C] hover:bg-[#FDBA3C] hover:text-white w-full py-2"
               >
                 Login
               </Button>
-              <Button className="rounded-full bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white w-full">
+              <Button className="rounded-full bg-[#FDBA3C] text-[#6B3F2D] hover:bg-[#6B3F2D] hover:text-white w-full py-2">
                 Sign Up
               </Button>
             </div>

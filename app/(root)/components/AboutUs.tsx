@@ -58,7 +58,7 @@ const AboutUs = () => {
             About Us
           </motion.h2>
           <motion.p
-            className="mx-auto text-sm md:text-base px-[80px]"
+            className="mx-auto text-sm md:text-base px-[40px]"
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
