@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import Image from "next/image";
@@ -47,8 +45,13 @@ export default function AboutPage() {
                 About Us
               </h2>
               <p className="text-base sm:text-lg text-gray-700">
-                High School students are the next generation of founders. Start
-                climbing the goldfish ladder to reach your goals today!
+                Goldfish Ladder is a launchpad for high school innovators.
+                <br /> We empower teenage founders to take their first steps
+                into entrepreneurship—with tools, mentorship, and real funding.
+                From idea to execution, our platform provides AI support, expert
+                guidance, and opportunities to pitch in our Mini Shark Tank. Our
+                mission is simple: make building a startup as accessible as
+                starting a school project.
               </p>
             </motion.div>
           </div>
@@ -56,11 +59,10 @@ export default function AboutPage() {
       </motion.section>
 
       {/* Why We Exist Section */}
-      <FadeInSection>
+      {/* <FadeInSection>
         <section className="py-16 sm:py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row md:items-center md:gap-12 max-w-screen-xl mx-auto">
-              {/* Image */}
               <motion.div
                 className="relative h-64 sm:h-[400px] md:h-[550px] w-full md:w-[300px] mx-auto md:mx-0"
                 initial={{ opacity: 0, x: -50 }}
@@ -76,7 +78,6 @@ export default function AboutPage() {
                 />
               </motion.div>
 
-              {/* Text & Quotes */}
               <motion.div
                 className="mt-10 md:mt-0 space-y-8 text-center md:text-left w-full md:w-2/3"
                 initial={{ opacity: 0, x: 50 }}
@@ -121,7 +122,7 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-      </FadeInSection>
+      </FadeInSection> */}
 
       {/* Our Team Section */}
       <FadeInSection>
